@@ -1,195 +1,334 @@
-/* Global Styles */
-body {
+/* General Reset */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+}
+
+/* Body and Main Color Theme */
+body {
+    background-color: rgb(224, 247, 250);
+    color: rgb(0, 61, 52);
     line-height: 1.6;
 }
 
+/* Header Section */
 header {
-    background: linear-gradient(90deg, #02071B, #7E5625);
-    color: white;
+    background-color: rgb(15, 87, 54);
     padding: 20px 0;
     text-align: center;
-    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+header .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
 header h1 {
-    font-size: 3rem;
-    margin: 0;
-}
-
-header nav {
-    margin-top: 10px;
-}
-
-header nav a {
+    font-size: 2.5rem;
     color: white;
-    text-decoration: none;
-    margin: 0 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     font-weight: bold;
-    transition: color 0.3s;
-}
-
-header nav a:hover {
-    color: #f0c36d;
 }
 
 /* Hero Section */
 .hero {
-    position: relative;
-    text-align: center;
+    background: linear-gradient(135deg, rgb(15, 87, 54), rgb(0, 61, 52));
     color: white;
-}
-
-.hero video {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadeIn 2s ease-out;
 }
 
 .hero h2 {
     font-size: 2.5rem;
-    margin-top: 50px;
+    margin-bottom: 20px;
+    animation: slideUp 1.5s ease-out;
 }
 
 .hero p {
     font-size: 1.2rem;
-    margin: 20px 0;
-}
-
-.hero .cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #7E5625;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-.hero .cta-button:hover {
-    background: #f0c36d;
-}
-
-/* Section Styles */
-section {
-    padding: 50px 20px;
-    max-width: 1200px;
-    margin: auto;
-    text-align: center;
-}
-
-section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    color: #02071B;
-}
-
-section p, section ul {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-/* Founders Section */
-.founders .founder {
-    display: flex;
-    align-items: center;
     margin-bottom: 30px;
-    text-align: left;
 }
 
-.founders img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 20px;
-    border: 3px solid #7E5625;
+.hero button {
+    background-color: rgb(224, 247, 250);
+    color: rgb(0, 61, 52);
+    padding: 12px 25px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
 }
 
-/* Donation Section */
-.donation {
-    background: linear-gradient(90deg, #7E5625, #02071B);
+.hero button:hover {
+    background-color: rgb(15, 87, 54);
     color: white;
-    padding: 40px 20px;
-    text-align: center;
 }
 
-.donation p {
+/* Problem Statement Section */
+#problem {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#problem h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#problem p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Solution Section */
+#solution {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgb(224, 247, 250);
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#solution h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#solution p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* About Us Section */
+#about-us {
+    padding: 60px 20px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about-us h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.team {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background-color: rgb(224, 247, 250);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 1rem;
+}
+
+/* Target Market Section */
+#target-market {
+    padding: 60px 20px;
+    background-color: rgb(0, 61, 52);
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#target-market ul {
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+#target-market li {
+    margin: 10px 0;
+}
+
+/* Financial Overview Section */
+#financials {
+    padding: 60px 20px;
+    background-color: white;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#financials h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#financials p {
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
-.donation button {
-    padding: 10px 20px;
-    background: white;
-    color: #02071B;
+#financials button {
+    background-color: rgb(15, 87, 54);
+    color: white;
+    padding: 12px 25px;
     border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#financials button:hover {
+    background-color: rgb(0, 61, 52);
+}
+
+/* Market Expansion Section */
+#market-expansion {
+    padding: 60px 20px;
+    background-color: rgb(224, 247, 250);
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Community Impact Section */
+#community-impact {
+    padding: 60px 20px;
+    background-color: white;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Call-to-Action Section */
+#cta {
+    padding: 60px 20px;
+    background-color: rgb(15, 87, 54);
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#cta h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#cta button {
+    background-color: rgb(224, 247, 250);
+    color: rgb(0, 61, 52);
+    padding: 12px 25px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#cta button:hover {
+    background-color: rgb(15, 87, 54);
+    color: white;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    background-color: rgb(224, 247, 250);
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#contact label {
     font-size: 1.1rem;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
 }
 
-.donation button:hover {
-    background: #f0c36d;
-    color: white;
-}
-
-/* Contact Form */
-.contact-form {
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
+#contact input {
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.contact-form button {
-    width: 100%;
-    padding: 10px;
-    background: #7E5625;
-    color: white;
-    border: none;
-    border-radius: 5px;
     font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s;
+    width: 100%;
+    border: 2px solid rgb(0, 61, 52);
+    border-radius: 5px;
 }
 
-.contact-form button:hover {
-    background: #f0c36d;
+#contact button {
+    background-color: rgb(0, 61, 52);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: rgb(15, 87, 54);
 }
 
 /* Footer */
 footer {
-    background: #02071B;
+    background-color: rgb(0, 61, 52);
     color: white;
     text-align: center;
-    padding: 20px 0;
-    font-size: 0.9rem;
+    padding: 20px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
 }
