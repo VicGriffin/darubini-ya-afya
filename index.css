@@ -79,6 +79,7 @@ header h1 {
 }
 
 /* Problem Statement Section */
+/* Problem Section */
 #problem {
     padding: 60px 20px;
     text-align: center;
@@ -98,7 +99,39 @@ header h1 {
     margin-bottom: 20px;
 }
 
-/* Solution Section */
+.problem-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.problem-image {
+    width: 30%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.problem-image:hover {
+    transform: scale(1.05);
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .problem-image {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .problem-image {
+        width: 90%;
+    }
+}
+
+
 #solution {
     padding: 60px 20px;
     text-align: center;
@@ -116,6 +149,12 @@ header h1 {
 #solution p {
     font-size: 1.1rem;
     margin-bottom: 20px;
+}
+#solution img{
+    width: 50%;
+    height: 50%;
+    margin: 20px;
+    border-radius: 10px;
 }
 
 /* About Us Section */
