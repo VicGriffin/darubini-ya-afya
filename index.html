@@ -3,118 +3,370 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darubini ya Afya</title>
+    <meta name="description" content="Darubini ya Afya - Transforming waste into clean air with eco-friendly solutions">
+    <title>Darubini ya Afya - Clean Air Solutions</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <!-- Header Section with Logo and Title -->
-    <header>
-        <div class="logo-title">
-            <img src="assets/logo2.png" alt="Darubini Logo" class="logo">
-            <h1>Darubini ya Afya</h1>
+    <!-- Navigation Header -->
+    <header class="sticky-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="assets/logo2.png" alt="Darubini Logo" class="logo">
+                <h1 class="brand-name">Darubini ya Afya</h1>
+            </div>
+            
+            <nav class="navigation">
+                <a href="#home" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <a href="#solutions" class="nav-link dropdown-toggle">Solutions</a>
+                    <div class="dropdown-menu">
+                        <a href="#problem">Challenge</a>
+                        <a href="#solution">Our Solution</a>
+                        <a href="#target-market">Target Market</a>
+                    </div>
+                </div>
+                <a href="#about-us" class="nav-link">Team</a>
+                <a href="#financials" class="nav-link">Investment</a>
+                <a href="#contact" class="nav-link cta-nav">Contact</a>
+            </nav>
+
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
     <!-- Home Page -->
-    <section class="hero">
-        <h2>Turning Pollution Into Clean Air: A Sustainable Future Starts Here!</h2>
-        <p>Revolutionizing Waste Management for a Healthier Planet.</p>
-        <button><a href="#learn-more">Learn More</a></button>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2 class="hero-title">Turning Pollution Into Clean Air</h2>
+            <p class="hero-subtitle">Revolutionizing Waste Management for a Healthier Planet</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get In Touch</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('solution').scrollIntoView({behavior: 'smooth'})">Learn More</button>
+            </div>
+        </div>
     </section>
 
     <!-- Problem Statement Section -->
-    <section id="problem">
-        <h2>The Challenge: Inefficient Waste Management and Air Pollution</h2>
-        <p>Current waste disposal methods release harmful toxins and contribute to environmental pollution, leading to diseases like cancer.</p>
-        <div class="problem-images">
-            <img src="assets/pollution1.jpeg" alt="Pollution Image 1" class="problem-image">
-            <img src="assets/pollution2.jpeg" alt="Pollution Image 2" class="problem-image">
-            <img src="assets/pollution3.jpeg" alt="Pollution Image 3" class="problem-image">
+    <section id="problem" class="section-spacing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Challenge</h2>
+                <p class="section-description">Inefficient Waste Management and Air Pollution</p>
+            </div>
+            <p class="section-content">Current waste disposal methods release harmful toxins and contribute to environmental pollution, leading to diseases like cancer.</p>
+            <div class="problem-images">
+                <img src="assets/pollution1.jpeg" alt="Pollution Image 1" class="problem-image">
+                <img src="assets/pollution2.jpeg" alt="Pollution Image 2" class="problem-image">
+                <img src="assets/pollution3.jpeg" alt="Pollution Image 3" class="problem-image">
+            </div>
         </div>
     </section>
     
 
     <!-- Solution Section -->
-    <section id="solution">
-        <h2>Our Solution: The Eco Hybrid Scrubber</h2>
-        <p>The Eco Hybrid Scrubber efficiently captures and neutralizes harmful emissions, transforming polluted air into clean air for a healthier environment.</p>
-        <img src="assets/scrubber.jpg" alt="Eco Hybrid Scrubber" class="solution-image">
+    <section id="solution" class="section-spacing solution-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Solution</h2>
+                <p class="section-description">The Eco Hybrid Scrubber</p>
+            </div>
+            <div class="solution-content">
+                <div class="solution-text">
+                    <p class="section-content">The Eco Hybrid Scrubber efficiently captures and neutralizes harmful emissions, transforming polluted air into clean air for a healthier environment.</p>
+                </div>
+                <img src="assets/scrubber.jpg" alt="Eco Hybrid Scrubber" class="solution-image">
+            </div>
+        </div>
     </section>
 
     <!-- About Us Section -->
-    <section id="about-us">
-        <h2>Meet the Team</h2>
-        <div class="team">
-            <div class="team-member">
-                <img src="assets/wesly.jpg" alt="CEO">
-                <h3>CEO - [WESLEY NJENGA]</h3>
-                <p>Founder and visionary leader driving Darubini’s mission to improve air quality.</p>
+    <section id="about-us" class="section-spacing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet the Team</h2>
+                <p class="section-description">Visionary Leaders Driving Environmental Innovation</p>
             </div>
-            <div class="team-member">
-                <img src="assets/Elijah.jpg" alt="COO">
-                <h3>FOUNDER,COO - [ELIJAh MAINA]</h3>
-                <p>Ensuring operational efficiency and delivering innovative solutions in waste management.</p>
-            </div>
-            <div class="team-member">
-                <img src="assets/martha.jpg" alt="Manager">
-                <h3>FOUNDER, EXECUTIVE DIRECTOR - [MARTHA MUKAI]</h3>
-                <p>Managing client relations and overseeing the installation and maintenance of our scrubbers.</p>
+            <div class="team">
+                <div class="team-member">
+                    <div class="team-image-wrapper">
+                        <img src="assets/wesly.jpg" alt="Wesley Njenga - CEO">
+                    </div>
+                    <h3>Wesley Njenga</h3>
+                    <p class="role">CEO & Founder</p>
+                    <p>Visionary leader driving Darubini's mission to improve air quality and transform waste management globally.</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-image-wrapper">
+                        <img src="assets/Elijah.jpg" alt="Elijah Maina - COO">
+                    </div>
+                    <h3>Elijah Maina</h3>
+                    <p class="role">Founder & COO</p>
+                    <p>Ensuring operational excellence and delivering innovative solutions in sustainable waste management.</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-image-wrapper">
+                        <img src="assets/martha.jpg" alt="Martha Mukai - Executive Director">
+                    </div>
+                    <h3>Martha Mukai</h3>
+                    <p class="role">Founder & Executive Director</p>
+                    <p>Managing strategic partnerships and overseeing installation and maintenance of our eco-scrubbers.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Target Market Section -->
-    <section id="target-market">
-        <h2>Who Benefits from Our Solution?</h2>
-        <ul>
-            <li>Factories - Compliance with air quality regulations</li>
-            <li>Waste Management Companies - Eco-friendly solutions for emissions</li>
-            <li>Educational Institutions - Promote clean air initiatives</li>
-            <li>Hospitals - Reduced toxic emissions for better health outcomes</li>
-            <li>Urban Municipalities - Scalable solutions for cleaner air in cities</li>
-        </ul>
+    <section id="target-market" class="section-spacing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Who Benefits from Our Solution?</h2>
+                <p class="section-description">Multiple Industries, One Solution</p>
+            </div>
+            <div class="market-grid">
+                <div class="market-card">
+                    <h4>Factories</h4>
+                    <p>Compliance with air quality regulations and reduced operational costs</p>
+                </div>
+                <div class="market-card">
+                    <h4>Waste Management Companies</h4>
+                    <p>Eco-friendly solutions for emissions control and sustainability</p>
+                </div>
+                <div class="market-card">
+                    <h4>Educational Institutions</h4>
+                    <p>Promote clean air initiatives and environmental responsibility</p>
+                </div>
+                <div class="market-card">
+                    <h4>Hospitals</h4>
+                    <p>Reduced toxic emissions for better health and safety outcomes</p>
+                </div>
+                <div class="market-card">
+                    <h4>Urban Municipalities</h4>
+                    <p>Scalable solutions for cleaner air and healthier communities</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Financial Overview Section -->
-    <section id="financials">
-        <h2>Investment Potential</h2>
-        <p>Initial cost: Ksh 850,000 | Annual Maintenance: Ksh 200,000</p>
-        <p>Projected Annual Profit: Ksh 2.5 Million | Break-even: 15 months</p>
-        <button><a href="#contact">Contact Us</a></button>
+    <section id="financials" class="section-spacing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Investment Potential</h2>
+                <p class="section-description">Strong Financial Returns & Rapid ROI</p>
+            </div>
+            <div class="financials-grid">
+                <div class="financial-card">
+                    <h4>Initial Investment</h4>
+                    <p class="financial-amount">Ksh 850,000</p>
+                    <p class="financial-desc">Complete system setup and installation</p>
+                </div>
+                <div class="financial-card">
+                    <h4>Annual Maintenance</h4>
+                    <p class="financial-amount">Ksh 200,000</p>
+                    <p class="financial-desc">Ongoing support and optimization</p>
+                </div>
+                <div class="financial-card">
+                    <h4>Projected Annual Profit</h4>
+                    <p class="financial-amount">Ksh 2.5 Million</p>
+                    <p class="financial-desc">Revenue from operations and services</p>
+                </div>
+                <div class="financial-card highlight">
+                    <h4>Break-even Timeline</h4>
+                    <p class="financial-amount">15 Months</p>
+                    <p class="financial-desc">Quick return on investment</p>
+                </div>
+            </div>
+            <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Investment Details</button>
+        </div>
     </section>
 
     <!-- Market Expansion Section -->
-    <section id="market-expansion">
-        <h2>Looking Ahead: Growth and Innovation</h2>
-        <p>Global adoption is expected as air quality regulations tighten. Our R&D efforts aim to increase pollutant scrubbing efficiency by 30% by 2030.</p>
+    <section id="market-expansion" class="section-spacing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Looking Ahead</h2>
+                <p class="section-description">Growth and Innovation</p>
+            </div>
+            <p class="section-content">Global adoption is expected as air quality regulations tighten. Our R&D efforts aim to increase pollutant scrubbing efficiency by 30% by 2030, positioning us as leaders in environmental technology.</p>
+        </div>
     </section>
 
     <!-- Community Impact Section -->
-    <section id="community-impact">
-        <h2>A Cleaner Tomorrow for Everyone</h2>
-        <p>Our technology improves urban air quality and reduces health risks, contributing to a healthier environment for all.</p>
+    <section id="community-impact" class="section-spacing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">A Cleaner Tomorrow</h2>
+                <p class="section-description">For Everyone</p>
+            </div>
+            <p class="section-content">Our technology improves urban air quality and reduces health risks, contributing to a healthier environment for all. Together, we're building a sustainable future.</p>
+        </div>
     </section>
 
     <!-- Call-to-Action Section -->
-    <section id="cta">
-        <h2>Join Us in Revolutionizing Air Quality</h2>
-        <button><a href="#contact">Get In Touch</a></button>
+    <section id="cta" class="section-spacing">
+        <div class="container">
+            <h2 class="cta-title">Join Us in Revolutionizing Air Quality</h2>
+            <p class="cta-subtitle">Invest in a cleaner, healthier future today</p>
+            <button class="btn btn-cta" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get In Touch</button>
+        </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <button type="submit">Submit</button>
-        </form>
+    <section id="contact" class="section-spacing">
+        <div class="container contact-container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-description">Let's talk about your project</p>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your project..." rows="5" required></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            <div class="success-message" id="successMessage" style="display: none;">
+                Thank you for reaching out! We'll get back to you soon.
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Darubini ya Afya | All rights reserved.</p>
+        <div class="footer-content">
+            <p>&copy; 2025 Darubini ya Afya | All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Back to Top</a>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navigation = document.querySelector('.navigation');
+        
+        menuToggle.addEventListener('click', () => {
+            navigation.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Smooth dropdown functionality
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                const dropdown = toggle.parentElement;
+                dropdown.classList.toggle('open');
+            });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+            }
+        });
+
+        // Sticky header on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.sticky-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navigation.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // Form submission with validation
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Clear previous errors
+            document.querySelectorAll('.error-message').forEach(error => error.textContent = '');
+            
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // Validation
+            let isValid = true;
+            
+            if (!name) {
+                document.getElementById('nameError').textContent = 'Name is required';
+                isValid = false;
+            }
+            
+            if (!email || !email.includes('@')) {
+                document.getElementById('emailError').textContent = 'Valid email is required';
+                isValid = false;
+            }
+            
+            if (!message) {
+                document.getElementById('messageError').textContent = 'Message is required';
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Show success message
+                successMessage.style.display = 'block';
+                contactForm.style.display = 'none';
+                
+                // Reset form
+                setTimeout(() => {
+                    contactForm.reset();
+                    successMessage.style.display = 'none';
+                    contactForm.style.display = 'block';
+                }, 3000);
+            }
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
